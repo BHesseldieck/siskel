@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Siskel</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- dependencies -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <!-- your scripts -->
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
+  </head>
+  <body>
+    <h1><em>Siskel's</em> Movie Rater</h1>
+    <div id="main">
+      <form>
+        <input type="radio" name="sort_by" value="title" checked> Title
+        <input type="radio" name="sort_by" value="year"         > Year
+        <input type="radio" name="sort_by" value="rating"       > Rating
+        <input type="radio" name="sort_by" value="like"         > Like
+      </form>
+      <div id="movies"></div>
+    </div>
+    <script>
+      $(function(){
+        var movies = new Movies(movieData);
+        new AppView({el: $('#main'), collection: movies}).render();
+      });
+    </script>
+  </body>
+</html>

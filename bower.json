@@ -1,0 +1,22 @@
+{
+  "name": "siskel",
+  "version": "0.0.0",
+  "authors": [
+    "Fred Zirdung <fred@hackreactor.com>",
+    "Allen Price <allen.price@hackreactor.com>"
+  ],
+  "description": "A brief introduction to backbone.js events",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "underscore": "~1.7.0",
+    "jquery": "~2.1.1"
+  }
+}
